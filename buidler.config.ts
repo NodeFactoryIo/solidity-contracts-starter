@@ -1,6 +1,6 @@
 import {usePlugin, BuidlerConfig} from "@nomiclabs/buidler/config";
 import {EthGasReporterConfig} from "buidler-gas-reporter/src/types"
-import accounts from "./testingData/Accounts"
+import accounts from "./test/Accounts"
 import dotenv from 'dotenv';
 
 dotenv.config()
