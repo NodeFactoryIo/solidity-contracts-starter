@@ -1,0 +1,71 @@
+{
+  "name": "@nodefactoryio/aument-contracts",
+  "version": "0.0.1",
+  "private": false,
+  "repository": {
+    "url": "git@github.com:NodeFactoryIo/aument-contracts.git",
+    "type": "git"
+  },
+  "authors": [
+    "Marin Petrunić <marin@nodefactory.io>",
+    "Belma Gutlić <belma@nodefactory.io>"
+  ],
+  "files": [
+    "typechain",
+    "artifacts",
+    "contracts",
+    "deployments",
+    "@types"
+  ],
+  "types": "./typechain/index.d.ts",
+  "scripts": {
+    "prepare": "env-prompt -d .env.sample",
+    "build": "yarn run clean && yarn run env && yarn run compile && yarn run typechain",
+    "lint": "npx buidler check",
+    "clean": "rm -rf artifacts cache coverage && npx buidler clean",
+    "compile": "buidler compile",
+    "deploy": "buidler deploy",
+    "deploy:localhost": "./wait-for-it.sh localhost:8545 -- sleep 1 && buidler deploy --network localhost",
+    "deploy:local": "concurrently --raw --kill-others --success first \"buidler node\" \"yarn deploy:localhost\"",
+    "deploy:goerli": "buidler deploy --network goerli",
+    "help": "npx buidler help",
+    "node": "buidler node",
+    "script": "buidler run",
+    "test": "buidler test --network buidlerevm",
+    "test:localhost": "./wait-for-it.sh localhost:8545 -- buidler test --network localhost",
+    "test:ci": "yarn run test:gas && yarn run test:coverage",
+    "test:gas": "REPORT_GAS=true concurrently --raw --kill-others --success first \"buidler node\" \"yarn test:localhost\"",
+    "test:coverage": "COVERAGE=1 buidler coverage --network coverage",
+    "typechain": "npx buidler typechain"
+  },
+  "devDependencies": {
+    "@nodefactory/buidler-typechain": "^0.1.0",
+    "@nodefactory/env-prompt": "^1.0.8",
+    "@nomiclabs/buidler": "1.3.5",
+    "@nomiclabs/buidler-ethers": "^2.0.0",
+    "@nomiclabs/buidler-solhint": "^1.3.3",
+    "@nomiclabs/buidler-waffle": "^2.0.0",
+    "@openzeppelin/contracts": "^3.1.0",
+    "@typechain/ethers-v4": "^1.0.0",
+    "@types/chai": "^4.2.11",
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^14.0.20",
+    "buidler-deploy": "^0.4.11",
+    "buidler-gas-reporter": "^0.1.3",
+    "buidler-typechain": "^0.1.1",
+    "chai": "^4.2.0",
+    "concurrently": "^5.2.0",
+    "dotenv": "^8.2.0",
+    "ethereum-waffle": "^3.0.2",
+    "mocha": "^8.0.1",
+    "solhint": "^3.0.0",
+    "solidity-coverage": "^0.7.9",
+    "ts-generator": "^0.0.8",
+    "ts-node": "^8.10.2",
+    "typechain": "^2.0.0",
+    "typescript": "^3.9.6"
+  },
+  "dependencies": {
+    "ethers": "^5.0.5"
+  }
+}
