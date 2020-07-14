@@ -5,6 +5,7 @@
 Following software is required to be installed to use this repo:
 * [NodeJS](https://nodejs.org/en/) >= v12.0.0
 * [Nomic Labs buidler](https://buidler.dev/getting-started/#overview)
+* [buidler-deploy](https://github.com/wighawag/buidler-deploy)
 
 ## Usage
 
