@@ -4,8 +4,19 @@
 
 Following software is required to be installed to use this repo:
 * [NodeJS](https://nodejs.org/en/) >= v12.0.0
-* [Nomic Labs buidler](https://buidler.dev/getting-started/#overview)
+
+This repo also uses dependecies that are associated with `buidler` but not built-in:
 * [buidler-deploy](https://github.com/wighawag/buidler-deploy)
+* [buidler-gas-reporter](https://github.com/cgewecke/buidler-gas-reporter/tree/master)
+* [buidler-typechain](https://github.com/rhlsthrm/buidler-typechain)
+
+## Notice
+
+If running on macOS, because `wait-for-it.sh` is using `timeout` which doesn't exist in bash shell, you need to execute:
+```
+brew install coreutils
+alias timeout=gtimeout
+```
 
 ## Usage
 
