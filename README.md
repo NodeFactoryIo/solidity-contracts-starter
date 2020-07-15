@@ -10,14 +10,6 @@ This repo also uses dependecies that are associated with `buidler` but not built
 * [buidler-gas-reporter](https://github.com/cgewecke/buidler-gas-reporter/tree/master)
 * [buidler-typechain](https://github.com/rhlsthrm/buidler-typechain)
 
-## Notice
-
-If running on macOS, because `wait-for-it.sh` is using `timeout` which doesn't exist in bash shell, you need to execute:
-```
-brew install coreutils
-alias timeout=gtimeout
-```
-
 ## Usage
 
 On first use of this repo, run `yarn install` to install all required dependencies.
