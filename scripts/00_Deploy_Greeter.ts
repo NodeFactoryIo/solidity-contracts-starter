@@ -5,6 +5,6 @@ const deployFunc: DeployFunction = async function (bre: BuidlerRuntimeEnvironmen
   const {deploy} = deployments;
   const {deployer} = await getNamedAccounts();
 
-  await deploy("Greeter", {from: deployer});
+  await deploy("Greeter", {from: deployer, args: ["Greeter"]});
 }
 export default deployFunc;
