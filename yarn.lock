@@ -418,10 +418,10 @@
     "@ethersproject/properties" "^5.0.0"
     "@ethersproject/strings" "^5.0.0"
 
-"@nodefactory/buidler-typechain@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@nodefactory/buidler-typechain/-/buidler-typechain-0.1.0.tgz#2e393bf54b386204675591a91005f8652ab1832b"
-  integrity sha512-z1lT8k2DeRsQNd2jxEO96LQs8PCstlhB3LDZ/L+dK/qAaOOvt7WHG+JF0mNN426i1+XXuJBvFaAdZQ6KT8+aVg==
+"@nodefactory/buidler-typechain@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@nodefactory/buidler-typechain/-/buidler-typechain-0.2.0.tgz#7ff6cc999047d4dedd49644780f3bbeaf3e1bafa"
+  integrity sha512-B+XZ0a2gjX/NId2FN4uWPKETH11vXShGLXA3d1MzraUwLfp5jW5prW4l0U21zG03FOLo22nnJgoPffG4YmFfJQ==
 
 "@nodefactory/env-prompt@^1.0.8":
   version "1.0.8"
@@ -629,10 +629,12 @@
     "@truffle/interface-adapter" "^0.3.0"
     web3 "1.2.1"
 
-"@typechain/ethers-v4@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@typechain/ethers-v4/-/ethers-v4-1.0.0.tgz#290c8dd31a5ea042f9da44d58c3c17f22550afe6"
-  integrity sha512-tN9XV0ezbLaEuK6jC5gW6AiH4ihq9lMl1ifJr700oBjknKKNDO6jUSzUE56gJzhW/fuyGsb4zsCHwf3JCkBd9w==
+"@typechain/ethers-v5@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@typechain/ethers-v5/-/ethers-v5-0.0.2.tgz#3a8e22105678c410f821a7bb1615b46ab060f1a3"
+  integrity sha512-YLRrZiYhyYsS7DR0x0LG5An/NdOOazd6StUR/jLoYUOi5jAgCifDWYxQBvVCBTDIn3Secy4gEf/FAI761ZkUFA==
+  dependencies:
+    ethers "^5.0.2"
 
 "@types/bignumber.js@^5.0.0":
   version "5.0.0"
@@ -1953,11 +1955,6 @@ buidler-gas-reporter@^0.1.3:
   integrity sha512-3Q27K52iGEghJ4icDdkV/67iJiRCaiZ39E2LLCBNZgx5NvltI5Q7oR3RVyCGO/m3SZBcj418zC8p7yeyj/jFdw==
   dependencies:
     eth-gas-reporter "^0.2.13"
-
-buidler-typechain@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/buidler-typechain/-/buidler-typechain-0.1.1.tgz#98d5b3ea222aa46a792c0e591ab894aa4b65c02e"
-  integrity sha512-UXS6m0MUzomDWFfd6Jivbz/wmNZo4dpW/Qa6Lq89qhS/qms/j1haJqlMxsDu+tCi8i/JH/IZtFkiEmEQ1PgmhA==
 
 bytes@3.1.0:
   version "3.1.0"
@@ -3572,7 +3569,7 @@ ethers@^4.0.32, ethers@^4.0.40:
     uuid "2.0.1"
     xmlhttprequest "1.8.0"
 
-ethers@^5.0.0, ethers@^5.0.1, ethers@^5.0.5:
+ethers@^5.0.0, ethers@^5.0.1, ethers@^5.0.2, ethers@^5.0.5:
   version "5.0.5"
   resolved "https://registry.yarnpkg.com/ethers/-/ethers-5.0.5.tgz#09b37c27d3b7d93c084af7ec4cad72ca8cfa5b7a"
   integrity sha512-hkVI7fi16ADWTctYMEfamU39hoR+JpkdEI7LH8PC7Bhl0Dp8y8dqFJ948pSEuuPJI5NR/L4+V6y2Alvyu+zROw==
