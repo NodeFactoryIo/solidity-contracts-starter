@@ -3,6 +3,8 @@
 
 WAITFORIT_cmdname=${0##*/}
 
+function timeout() { perl -e 'alarm shift; exec @ARGV' "$@"; }
+
 echoerr() { if [[ $WAITFORIT_QUIET -ne 1 ]]; then echo "$@" 1>&2; fi }
 
 usage()
