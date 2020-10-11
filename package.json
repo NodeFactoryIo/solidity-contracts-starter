@@ -39,9 +39,7 @@
     "typechain": "npx buidler typechain"
   },
   "devDependencies": {
-    "@nodefactory/buidler-typechain": "^0.2.0",
-    "@nodefactory/env-prompt": "^1.0.8",
-    "@nomiclabs/buidler": "1.3.5",
+    "@nomiclabs/buidler": "^1.4.7",
     "@nomiclabs/buidler-ethers": "^2.0.0",
     "@nomiclabs/buidler-solhint": "^1.3.3",
     "@nomiclabs/buidler-waffle": "^2.0.0",
@@ -51,9 +49,11 @@
     "@types/node": "^14.0.20",
     "buidler-deploy": "^0.4.11",
     "buidler-gas-reporter": "^0.1.3",
+    "buidler-typechain": "^0.2.1",
     "chai": "^4.2.0",
     "concurrently": "^5.2.0",
     "dotenv": "^8.2.0",
+    "env-prompt": "^1.1.1",
     "ethereum-waffle": "^3.0.2",
     "ethers": "^5.0.5",
     "mocha": "^8.0.1",
