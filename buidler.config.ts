@@ -63,7 +63,7 @@ const config: BuidlerConfig = {
   },
   gasReporter: {
     coinmarketcap: process.env.COINMARKETCAP_API_KEY,
-    enabled: !!(process.env.REPORT_GAS),
+    enabled: !!(process.env.REPORT_GAS && process.env.REPORT_GAS != "false"),
   },
   typechain: {
     outDir: "typechain",
