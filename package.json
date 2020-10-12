@@ -20,7 +20,7 @@
   "types": "./typechain/index.d.ts",
   "scripts": {
     "prepare": "env-prompt -d .env.sample",
-    "build": "yarn run clean && yarn run env && yarn run compile && yarn run typechain",
+    "build": "yarn run clean && yarn run compile && yarn run typechain",
     "lint": "npx buidler check",
     "clean": "rm -rf artifacts cache coverage && npx buidler clean",
     "compile": "buidler compile",
