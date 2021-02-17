@@ -4,6 +4,8 @@ import accounts from "./test/Accounts"
 import dotenv from 'dotenv';
 
 dotenv.config()
+
+// Add coinmarketcap entry to config type
 declare module "@nomiclabs/buidler/types" {
   interface BuidlerConfig {
     gasReporter?: Partial<EthGasReporterConfig> & {
@@ -16,7 +18,7 @@ usePlugin("@nomiclabs/buidler-solhint");
 usePlugin("@nomiclabs/buidler-ethers");
 
 usePlugin("solidity-coverage");
-usePlugin("@nodefactory/buidler-typechain")
+usePlugin("buidler-typechain")
 usePlugin("buidler-gas-reporter");
 usePlugin("buidler-deploy");
 
@@ -63,7 +65,7 @@ const config: BuidlerConfig = {
   },
   gasReporter: {
     coinmarketcap: process.env.COINMARKETCAP_API_KEY,
-    enabled: !!(process.env.REPORT_GAS),
+    enabled: !!(process.env.REPORT_GAS && process.env.REPORT_GAS != "false"),
   },
   typechain: {
     outDir: "typechain",
