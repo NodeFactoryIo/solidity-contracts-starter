@@ -1,9 +1,9 @@
 {
-  "name": "@nodefactoryio/aument-contracts",
+  "name": "@nodefactoryio/buidler-starter",
   "version": "0.0.1",
   "private": false,
   "repository": {
-    "url": "git@github.com:NodeFactoryIo/aument-contracts.git",
+    "url": "git@github.com:NodeFactoryIo/buidler-starter.git",
     "type": "git"
   },
   "authors": [
