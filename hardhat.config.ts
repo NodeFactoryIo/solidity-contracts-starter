@@ -1,31 +1,34 @@
-import {usePlugin, BuidlerConfig} from "@nomiclabs/buidler/config";
-import {EthGasReporterConfig} from "buidler-gas-reporter/src/types"
+import {HardhatUserConfig} from "hardhat/types";
+import {EthGasReporterConfig} from "hardhat-gas-reporter/src/types"
 import accounts from "./test/Accounts"
 import dotenv from 'dotenv';
 
+import "@nomiclabs/hardhat-solhint";
+import "@nomiclabs/hardhat-ethers"
+
+// import "solidity-coverage";
+import "hardhat-gas-reporter";
+import "hardhat-deploy";
+import "hardhat-typechain";
+
 dotenv.config()
+// declare module "hardhat/types" {
+//   interface HardhatUserConfig {
+//     gasReporter?: Partial<EthGasReporterConfig> & {
+//       coinmarketcap?: string
+//     }
+//   }
+// }
 
-// Add coinmarketcap entry to config type
-declare module "@nomiclabs/buidler/types" {
-  interface BuidlerConfig {
-    gasReporter?: Partial<EthGasReporterConfig> & {
-      coinmarketcap?: string
+const config: HardhatUserConfig = {
+  defaultNetwork: "hardhat",
+  solidity: {
+    version: "0.8.1",
+    settings: {
+      optimizer: {
+        enabled: false
+      }
     }
-  }
-}
-
-usePlugin("@nomiclabs/buidler-solhint");
-usePlugin("@nomiclabs/buidler-ethers");
-
-usePlugin("solidity-coverage");
-usePlugin("buidler-typechain")
-usePlugin("buidler-gas-reporter");
-usePlugin("buidler-deploy");
-
-const config: BuidlerConfig = {
-  defaultNetwork: "buidlerevm",
-  solc: {
-    version: "0.6.6"
   },
   paths: {
     sources: "./contracts",
@@ -33,8 +36,9 @@ const config: BuidlerConfig = {
     deploy: "./scripts",
   },
   networks: {
-    buidlerevm: {
+    hardhat: {
       loggingEnabled: false,
+      live: false,
       accounts: accounts
     },
     coverage: {

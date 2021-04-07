@@ -1,5 +1,5 @@
-import {ethers, deployments} from "@nomiclabs/buidler";
-import {Deployment} from "@nomiclabs/buidler/types";
+import {ethers, deployments} from "@nomiclabs/hardhat-ethers";
+import {Deployment} from "hardhat-deploy/types";
 import {expect} from "chai";
 
 import {Greeter} from "../typechain/Greeter";

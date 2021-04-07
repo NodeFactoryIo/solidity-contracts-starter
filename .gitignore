@@ -232,7 +232,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# Nomic Labs Buidler
+# Nomic Labs Hardhat
 cache
 artifacts
 typechain
