@@ -1,8 +1,6 @@
-import {ethers, deployments} from "@nomiclabs/hardhat-ethers";
 import {Deployment} from "hardhat-deploy/types";
 import {expect} from "chai";
-
-import {Greeter} from "../typechain/Greeter";
+import { ethers, deployments } from "hardhat";
 
 
 describe("Greeter", function () {
@@ -14,6 +12,7 @@ describe("Greeter", function () {
   });
 
   it("Should return the new greeting once it's changed", async function () {
+    
     const Greeter = await ethers.getContractFactory("Greeter");
     const greeter = await Greeter.deploy("Hello, world!");
 
