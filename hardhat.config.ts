@@ -1,5 +1,4 @@
 import {HardhatUserConfig} from "hardhat/types";
-import {EthGasReporterConfig} from "hardhat-gas-reporter/src/types"
 import accounts from "./test/Accounts"
 import dotenv from 'dotenv';
 
