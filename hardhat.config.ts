@@ -11,13 +11,6 @@ import "hardhat-deploy";
 import "hardhat-typechain";
 
 dotenv.config()
-// declare module "hardhat/types" {
-//   interface HardhatUserConfig {
-//     gasReporter?: Partial<EthGasReporterConfig> & {
-//       coinmarketcap?: string
-//     }
-//   }
-// }
 
 const config: HardhatUserConfig = {
   defaultNetwork: "hardhat",
