@@ -8,7 +8,9 @@
   },
   "authors": [
     "Marin Petrunić <marin@nodefactory.io>",
-    "Belma Gutlić <belma@nodefactory.io>"
+    "Belma Gutlić <belma@nodefactory.io>",
+    "Nikola Mlinarić <nikola@nodefactory.io>",
+    "Mak Muftić <mak@nodefactory.io>"
   ],
   "files": [
     "typechain",
@@ -29,7 +31,7 @@
     "deploy:local": "concurrently --raw --kill-others --success first \"hardhat node\" \"yarn deploy:localhost\"",
     "deploy:goerli": "hardhat deploy --network goerli",
     "help": "npx hardhat help",
-    "node": "hardhat node",
+    "node-local": "npx hardhat node",
     "script": "hardhat run",
     "test": "hardhat test --network hardhatevm",
     "test:localhost": "./wait-for-it.sh localhost:8545 -- hardhat test --network localhost",
