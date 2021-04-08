@@ -232,11 +232,13 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# Nomic Labs Buidler
+# Nomic Labs Hardhat
 cache
 artifacts
 typechain
 coverage.json
 deployments
+
+types
 
 # End of https://www.gitignore.io/api/node,macos,linux,windows,solidity,jetbrains+all
