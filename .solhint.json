@@ -1,11 +1,11 @@
 {
-  "extends": "solhint:default",
+  "extends": "solhint:recommended",
   "plugins": [],
   "rules": {
+    "compiler-version": "off",
     "const-name-snakecase": "off",
     "avoid-suicide": "error",
     "avoid-sha3": "warn",
-    "avoid-tx-origin:": "warn",
     "not-rely-on-time": "warn",
     "not-rely-on-block-hash": "warn"
   }
