@@ -7,7 +7,7 @@ import "@nomiclabs/hardhat-ethers"
 import "solidity-coverage";
 import "hardhat-gas-reporter";
 import "hardhat-deploy";
-import "hardhat-typechain";
+import "@typechain/hardhat";
 
 dotenv.config()
 
